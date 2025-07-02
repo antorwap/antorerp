@@ -1,1 +1,1 @@
-// login/signup logic here
+// Auth logic

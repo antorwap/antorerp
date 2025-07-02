@@ -1,1 +1,1 @@
-// dashboard navigation
+// Main dashboard logic
