@@ -1,71 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ERP Dashboard</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f3f3f3;
-    }
-    .navbar {
-      display: flex;
-      background-color: #2d2d2d;
-      padding: 1rem;
-      align-items: center;
-    }
-    .navbar h2 {
-      color: white;
-      margin-right: 2rem;
-    }
-    .navbar button {
-      background: none;
-      color: white;
-      border: none;
-      margin-right: 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .navbar button:hover {
-      text-decoration: underline;
-    }
-    .content {
-      padding: 2rem;
-    }
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-  </style>
-</head>
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Antor ERP — Login</title>
+<link rel="stylesheet" href="assets/styles.css"></head>
 <body>
-
-  <div class="navbar">
-    <h2>ERP Modules</h2>
-    <button onclick="loadModule('dashboard.html')">Dashboard</button>
-    <button onclick="loadModule('inventory.html')">Inventory</button>
-    <button onclick="loadModule('accounts.html')">Accounts</button>
-    <button onclick="loadModule('users.html')">Users</button>
-    <button onclick="loadModule('reports.html')">Reports</button>
-    <button onclick="loadModule('settings.html')">Settings</button>
-    <button onclick="loadModule('logout.html')">Logout</button>
-  </div>
-
-  <div class="content">
-    <iframe id="mainFrame" src="welcome.html"></iframe>
-  </div>
-
-  <script>
-    function loadModule(page) {
-      document.getElementById('mainFrame').src = page;
-    }
-  </script>
-
-</body>
-</html>
+<div class="main" style="max-width:360px;margin:80px auto;">
+  <h2>Antor ERP Login</h2>
+  <input id="email" type="email" placeholder="Email" style="width:100%;padding:8px;margin-bottom:8px;">
+  <input id="password" type="password" placeholder="Password" style="width:100%;padding:8px;margin-bottom:12px;">
+  <button id="btnLogin" style="width:100%;padding:10px;background:#1abc9c;color:white;border:none;">
+    Login
+  </button>
+  <p style="margin-top:12px;">New? <a href="signup.html">Sign up here</a></p>
+</div>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+</body></html>

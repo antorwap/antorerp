@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-    }
-    h1 {
-      color: #1f2937;
-    }
-  </style>
-</head>
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Antor ERP — Dashboard</title>
+<link rel="stylesheet" href="assets/styles.css"></head>
 <body>
-  <h1>Dashboard</h1>
-  <p>Here is your dashboard overview.</p>
-</body>
-</html>
+<div class="header">
+  <span class="logo">Antor ERP</span>
+  <nav class="navbar">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="modules/inventory.html" target="mainFrame">Inventory</a>
+    <a href="modules/accounts.html" target="mainFrame">Accounts</a>
+    <a href="modules/reports.html" target="mainFrame">Reports</a>
+    <a href="modules/settings.html" target="mainFrame">Settings</a>
+    <a href="modules/logout.html" target="_self">Logout</a>
+  </nav>
+</div>
+<div class="main">
+  <iframe name="mainFrame" src="modules/inventory.html" style="width:100%;height:70vh;border:none;"></iframe>
+</div>
+<footer>© 2025 Antor ERP. All rights reserved.</footer>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="main.js"></script>
+</body></html>
