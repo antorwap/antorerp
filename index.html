@@ -1,21 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ERP Login</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERP Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+    }
+    .navbar {
+      display: flex;
+      background-color: #2d2d2d;
+      padding: 1rem;
+      align-items: center;
+    }
+    .navbar h2 {
+      color: white;
+      margin-right: 2rem;
+    }
+    .navbar button {
+      background: none;
+      color: white;
+      border: none;
+      margin-right: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .navbar button:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+  </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <input type="email" id="email" placeholder="Email" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-    <p>No account? <a href="signup.html">Sign up</a></p>
+
+  <div class="navbar">
+    <h2>ERP Modules</h2>
+    <button onclick="loadModule('dashboard.html')">Dashboard</button>
+    <button onclick="loadModule('inventory.html')">Inventory</button>
+    <button onclick="loadModule('accounts.html')">Accounts</button>
+    <button onclick="loadModule('users.html')">Users</button>
+    <button onclick="loadModule('reports.html')">Reports</button>
+    <button onclick="loadModule('settings.html')">Settings</button>
+    <button onclick="loadModule('logout.html')">Logout</button>
   </div>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-  <script src="firebase-config.js"></script>
-  <script src="login.js"></script>
+
+  <div class="content">
+    <iframe id="mainFrame" src="welcome.html"></iframe>
+  </div>
+
+  <script>
+    function loadModule(page) {
+      document.getElementById('mainFrame').src = page;
+    }
+  </script>
+
 </body>
 </html>
