@@ -1,26 +1,35 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-}
-.auth-container {
-  max-width: 360px;
-  margin: 80px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-.auth-container input,
-.auth-container button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-button {
-  background: #3b82f6;
-  color: white;
-  border: none;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - Antor ERP</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Antor ERP</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="accounts.html">Accounts</a>
+    <a href="reports.html">Reports</a>
+    <a href="#" id="logoutBtn">Logout</a>
+  </div>
+
+  <div class="main">
+    <h1>Welcome Back 👋</h1>
+
+    <div class="card">
+      <h3>📦 Inventory Summary</h3>
+      <p>Total Products: 120<br/>Out of Stock: 5</p>
+    </div>
+
+    <div class="card">
+      <h3>📊 Monthly Sales Chart</h3>
+      <p>Coming soon with Chart.js</p>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/firebase.js"></script>
+  <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>
