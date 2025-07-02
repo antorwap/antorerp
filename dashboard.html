@@ -1,14 +1,25 @@
 
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
 <title>Dashboard - Antor ERP</title>
-<link rel="stylesheet" href="assets/css/styles.css"></head>
-<body>
-<div class="main">
-  <h2>Welcome to Antor ERP Dashboard</h2>
-  <p>You are logged in.</p>
-  <button id="logoutBtn">Logout</button>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head><body>
+<div class="sidebar">
+  <h2>Antor ERP</h2>
+  <ul>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">Inventory</a></li>
+    <li><a href="#">Accounts</a></li>
+    <li><a href="#">Reports</a></li>
+    <li><a href="#" id="logoutBtn">Logout</a></li>
+  </ul>
 </div>
-<script type="module" src="firebase.js"></script>
-<script type="module" src="auth.js"></script>
+<div class="main">
+  <h1>Welcome Back 👋</h1>
+  <div class="card">📦 Inventory Summary</div>
+  <div class="card">📊 Monthly Sales Chart</div>
+</div>
+<script type="module" src="assets/js/firebase.js"></script>
+<script type="module" src="assets/js/auth.js"></script>
 </body></html>
